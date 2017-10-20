@@ -92,7 +92,7 @@ def winner(board)
 end
 
 def play(board)
-  until !full?(board) 
+  until !full?(board)
     turn(board)
   end
 
