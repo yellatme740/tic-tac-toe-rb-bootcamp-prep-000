@@ -92,13 +92,12 @@ def winner(board)
 end
 
 def play(board)
-  until !full?(board)
+  while !over?(board)
     turn(board)
   end
-
   if won?(board)
-    return "Winner"
-  else draw?(board)
-    return "Draw"
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
+    puts "Cat's Game!"
   end
 end
